@@ -1,0 +1,50 @@
+.item {
+  color: white;
+  margin: 15px 15px 15px 15px;
+  background-color: #262938;
+  border-radius: 15px;
+  min-height: 90px;
+  display: grid;
+  grid-template-areas: "i", "u", "l";
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+.item img {
+  width: 70px;
+  border-radius: 50%;
+
+  margin: 10px;
+}
+
+.likes {
+  text-align: center;
+}
+
+.postText {
+  padding: 15px;
+
+}
+
+#likeButton {
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #262938;
+  padding: 0;
+  margin: 0;
+  border-radius: 0px 15px 15px 0px;
+  margin: 0px 0px 0px -1px;
+  transition: background-color 0.3s;
+  color: rgb(255, 255, 255);
+  border: solid 1px #767676;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#likeButton:hover {
+  background-color: #3b3d4d;
+}
+
+#likeButton:active {
+  background-color: #454755;
+}

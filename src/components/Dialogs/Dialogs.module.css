@@ -1,0 +1,143 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 4fr 15fr;
+    padding: 0;
+    text-align: left;
+    min-height: 767px;
+}
+
+.dialogsItems {
+    margin: 10px 0px 10px 10px;
+    display: block;
+    width: calc(100% - 10px);
+    max-height: 767px;
+
+    font-family: "B612", sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 300;
+    line-height: 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #262938;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.dialogsItem {
+    display: grid;
+    grid-template-columns: 5fr 15fr;
+
+    margin: 0 auto;
+    width: calc(100% - 18px);
+    transition: all 0.3s;
+}
+
+.dialogsItem img {
+    width: 35px;
+    padding: 7.5px 0px 0px 10px;
+}
+
+.dialog a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+}
+
+.messages {
+    display: grid;
+    grid-template-rows: 10fr 1fr;
+    position: relative;
+    border-radius: 0px 15px 15px 0px;
+    max-height: 747px;
+    text-align: left;
+    margin: 10px 10px 10px 10px;
+
+    width: calc(100% - 20px);
+    height: calc(100% + 20px);
+    font-family: "B612", sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 300;
+    line-height: 30px;
+    background-color: #262938;
+
+}
+
+.dialog {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.dialogsItem:hover {
+    box-shadow: inset 0 -50px 50px -50px #3b3d4d;
+}
+
+.messageItem {
+    display: grid;
+    grid-template-columns: 3fr 15fr;
+    background-color: #3b3d4d;
+    margin: 10px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+.messageItem img {
+    width: 35px;
+    border-radius: calc(35px / 2);
+
+}
+
+.realMessages {
+    border-radius: 0px 15px 15px 0px;
+    padding: 10px;
+    overflow: auto;
+    height: auto;
+    min-height: 350px;
+    background-color: #262938;
+}
+
+.messageCreate {
+
+    background-color: #2e3041;
+    padding-top: 10px;
+
+    display: grid;
+    grid-template-areas: "i", "u";
+    grid-template-columns: 7fr 1fr;
+}
+
+#messageTextArea {
+    color: white;
+    padding: 12px 20px;
+    min-height: 66px;
+    max-height: 300px;
+    border-radius: 15px 0px 0px 15px;
+    background-color: #262938;
+    font-size: 16px;
+    resize: none;
+    overflow: none;
+    outline: none;
+}
+
+#messageButton {
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    background-color: #262938;
+    padding: 0;
+    margin: 0;
+    border-radius: 0px 15px 15px 0px;
+    transition: background-color 0.3s;
+    color: rgb(255, 255, 255);
+    border: solid 1px #767676;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#messageButton:hover {
+    background-color: #3b3d4d;
+}
+
+#messageButton:active {
+    background-color: #454755;
+}

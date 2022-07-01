@@ -1,0 +1,92 @@
+div h1 {
+    font-style: italic;
+    margin: 10px;
+    color: aliceblue;
+}
+
+form {
+    color: white;
+    margin: 15px 15px 15px 15px;
+    background-color: #262938;
+
+
+    display: block;
+
+}
+
+form div {
+    margin: 10px;
+    color: aliceblue;
+    width: 50%;
+}
+
+form button {
+    margin-bottom: 10px;
+}
+
+form div input {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+
+
+#checkbox {
+    width: 30px;
+}
+
+form button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+}
+
+.submit {
+    cursor: pointer;
+}
+
+.submit {
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    background-color: #262938;
+
+    width: 150px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    border: solid 1px #767676;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.submit:hover {
+    background-color: #3b3d4d;
+}
+
+.submit:active {
+    background-color: #454755;
+}
+
+.errorOpacity {
+    visibility: hidden;
+}
+
+.formError {
+    border: red 1px solid;
+    padding: 5px;
+    color: red;
+    width: 300px;
+    border-radius: 5px;
+
+}
+
+#loginButton {
+    cursor: pointer;
+}

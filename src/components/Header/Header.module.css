@@ -1,0 +1,14 @@
+.header {
+  grid-area: h;
+  background-color: #2e3041;
+  border-radius: 20px;
+}
+
+.logo {
+  width: 100px;
+  padding: 18px 0px 14px 16px;
+}
+
+.loginBlock {
+  float: right;
+}

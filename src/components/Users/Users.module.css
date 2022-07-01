@@ -1,0 +1,137 @@
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+.item {
+    color: white;
+    margin: 15px 15px 15px 15px;
+    background-color: #262938;
+    border-radius: 15px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 4fr;
+}
+
+.hello {
+    color: white;
+}
+
+.userPhoto {
+    width: 100px;
+}
+
+.image {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.image img {
+    width: 120px;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.photoNbutton {
+    text-align: center;
+}
+
+#followButton {
+    width: 100px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    background-color: #262938;
+
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    color: rgb(255, 255, 255);
+    border: solid 1px #767676;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#followButton:hover {
+    background-color: #3b3d4d;
+}
+
+#followButton:active {
+    background-color: #454755;
+}
+
+#followButton:disabled {
+    background-color: #ff0000;
+    color: rgb(207, 207, 207);
+}
+
+.profileInfo {
+    padding: 10px 0px 0px 0px;
+}
+
+.profileInfo ul {
+    grid-area: u;
+    padding: 0;
+    margin: 0;
+}
+
+.profileInfo ul li {
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.profileInfo ul li:nth-last-child(-n + 2) {
+    color: rgb(160, 160, 160);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.profileInfo ul li:nth-child(2) {
+    color: rgb(192, 192, 192);
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+#addUsers {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    padding: 10px 20px;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    background-color: #262938;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    color: rgb(255, 255, 255);
+    border: solid 1px #767676;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+#addUsers:hover {
+    background-color: #3b3d4d;
+}
+
+#addUsers:active {
+    background-color: #454755;
+}
+
+
+.default {
+    cursor: pointer;
+}
