@@ -4,6 +4,10 @@ div h1 {
     color: aliceblue;
 }
 
+#loginForm {
+    border-radius: 15px;
+}
+
 form {
     color: white;
     margin: 15px 15px 15px 15px;

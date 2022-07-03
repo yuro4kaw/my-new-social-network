@@ -4,7 +4,7 @@ import HeaderContainer from "./components/Header/HeaderContainer";
 import Navbar from "./components/Navbar/Navbar";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import UsersContainer from "./components/Users/UsersContainer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/Login/Login";
 import { connect, Provider } from "react-redux";
 import { initializeApp } from "./Redux/appReducer";
@@ -59,11 +59,11 @@ let AppContainer = compose(
 
 const MainApp = (props) => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Provider store={store}>
                 <AppContainer />,
             </Provider>
-        </BrowserRouter>
+        </HashRouter>
     )
 } 
 
