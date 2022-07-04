@@ -5,7 +5,7 @@ import { reduxForm } from "redux-form";
 import { Field } from "redux-form";
 
 function MyPosts(props) {
-  let postElements = props.postsArray.map(p => <Post likesCount={p.likesCount} postText={p.message} />)
+  let postElements = props.postsArray.map(p => <Post key={p.id} likesCount={p.likesCount} postText={p.message} />)
 
   let onAddPost = (values) => {
     props.addPost(values.postText);

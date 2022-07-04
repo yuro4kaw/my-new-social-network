@@ -1,7 +1,7 @@
 import React from "react";
 import Profile from "./Profile";
 import { connect } from "react-redux";
-import { setUserProfile, setProfileThunk, getStatus, updateStatus, savePhoto } from "../../Redux/profileReducer";
+import { setUserProfile, setProfileThunk, getStatus, updateStatus, savePhoto, saveProfile } from "../../Redux/profileReducer";
 import {
     useLocation,
     useNavigate,
@@ -34,7 +34,7 @@ class ProfileContainer extends React.Component {
         if (!userId) {
             userId = this.props.authorisedUserId;
             if (!userId) {
-                //this.props.router.navigate("/login"
+                //this.props.router.navigate("/login");
             }
         }
         this.props.setProfileThunk(userId);
@@ -74,6 +74,7 @@ class ProfileContainer extends React.Component {
                 status={this.props.status}
                 updateStatus={this.props.updateStatus}
                 savePhoto={this.props.savePhoto}
+
             />
         )
     }
@@ -88,7 +89,7 @@ let mapStateToProps = (state) => ({
 });
 
 export default compose(
-    connect(mapStateToProps, { setUserProfile, setProfileThunk, getStatus, updateStatus, savePhoto }),
+    connect(mapStateToProps, { setUserProfile, setProfileThunk, getStatus, updateStatus, savePhoto, saveProfile }),
     withRouter,
 )(ProfileContainer)
 
