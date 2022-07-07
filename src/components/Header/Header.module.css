@@ -2,13 +2,34 @@
   grid-area: h;
   background-color: #2e3041;
   border-radius: 20px;
+  display: flex;
+  justify-content: space-between
 }
 
 .logo {
   width: 100px;
-  padding: 18px 0px 14px 16px;
+  margin: auto 15px;
 }
 
 .loginBlock {
-  float: right;
+  margin: auto 15px;
+
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.logoutButton {
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #262938;
+  border-radius: 15px;
+  width: 100px;
+  height: 40px;
+  color: rgb(255, 255, 255);
+  border: solid 1px #767676;
+  font-size: 15px;
+  font-weight: 700;
 }

@@ -1,74 +1,96 @@
-.fone {
-  border-radius: 15px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: calc(100% - 20px);
-  margin-top: 10px;
-}
-
 .avatar {
   width: 100%;
   border-radius: 50%;
   width: 200px;
-
   /* box-shadow: 0px 0px 15px rgba(255, 173, 66, 0.438); */
 }
 
 .profile {
-  width: 100%;
+  padding: 15px;
+}
+
+
+.basicInfo {
   display: grid;
-  grid-template-areas: "i""u";
-  grid-template-columns: 6fr 6fr;
-  grid-gap: 0px 15px;
-  padding: 10px;
+  grid-template-columns: 200px auto;
 }
 
-.profile img {
-  grid-area: i;
-  min-width: 70px;
+.secondPart {
+  padding-left: 10px;
 }
 
-.profileInfo ul {
-  grid-area: u;
-  padding: 0px 0px 0px 20px;
-  margin: 0;
-  width: 136px;
+.title {
+  background-color: #262938;
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around
 }
 
-.profileInfo ul li {
+.socialNetworkIcon {
+  width: 40px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 0;
+}
+
+/* text styling */
+
+.checkbox {
+  width: 13px;
+
+}
+
+.fullName {
+  margin-top: 28px;
   color: white;
   font-size: 23px;
   font-weight: 600;
+  text-align: center;
 }
 
-.profileInfo ul li:nth-last-child(-n + 2) {
-  color: rgb(160, 160, 160);
+
+.topicHeader {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 15px;
+
+}
+
+.topicText {
+  color: white;
+  padding: 12px 20px;
+  border-radius: 15px;
+  background-color: #262938;
   font-size: 16px;
+  display: inline-block;
   font-weight: 400;
+
 }
 
-.profileInfo ul li:nth-child(2) {
-  color: rgb(192, 192, 192);
-  font-size: 18px;
-  font-weight: 500;
-  padding-bottom: 5px;
+.lookingForAJob {
+  color: white;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
 }
 
-.profileInfo ul li:last-child {
+.editProfileButton {
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #262938;
+  border-radius: 15px;
+  width: 200px;
+  height: 50px;
   color: rgb(255, 255, 255);
-  font-size: 18px;
-  font-weight: 400;
+  border: solid 1px #767676;
+  font-size: 15px;
+  font-weight: 700;
 }
 
-.span1 {
-  display: inline-block;
-  margin-top: 20px;
-  max-width: 500px;
-}
-
-.input1 {
-  display: inline-block;
-  margin-top: 20px;
-  max-width: 500px;
+.title {
+  margin-top: 15px;
 }

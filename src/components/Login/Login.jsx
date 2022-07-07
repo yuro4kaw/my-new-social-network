@@ -9,7 +9,7 @@ import { CreateField } from "../common/FormsControls/FormsControls";
 const LoginForm = (props) => {
 
     return (
-        <form onSubmit={props.handleSubmit} id={s.loginForm}>
+        <form onSubmit={props.handleSubmit} id={s.loginForm} className={s.loginForm}>
 
             {CreateField("input", "Email", "email")}
 
@@ -38,7 +38,7 @@ const Login = (props) => {
     }
 
     return (
-        <div>
+        <div className={s.loginText}>
             <h1>Login</h1>
             <LoginReduxForm onSubmit={onSubmit} />
         </div>

@@ -6,3 +6,155 @@
     border-radius: 5px;
 
 }
+
+.avatar {
+    width: 100%;
+    border-radius: 50%;
+    width: 200px;
+    /* box-shadow: 0px 0px 15px rgba(255, 173, 66, 0.438); */
+}
+
+.profile {
+    padding: 10px;
+}
+
+.profile .avatar {
+    min-width: 70px;
+}
+
+
+
+.basicInfo {
+    display: grid;
+    grid-template-columns: 215px auto;
+}
+
+.title {
+    background-color: #262938;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+.socialNetworkIcon {
+    width: 40px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 0;
+}
+
+/* text styling */
+
+.checkbox {
+    width: 13px;
+
+}
+
+.fullName {
+    color: white;
+    width: 200px;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.topicHeader {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 15px;
+
+}
+
+.topicText {
+    color: white;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background-color: #262938;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 400;
+    resize: none;
+    overflow-y: none;
+    outline: none;
+    width: 585px;
+    height: 100px;
+}
+
+.lookingForAJob {
+    margin-left: -8px;
+    color: white;
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.editProfileButton {
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    background-color: #262938;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    border: solid 1px #767676;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.title {
+    margin-top: 15px;
+}
+
+.linkInput {
+    color: white;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background-color: #262938;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 400;
+    border: none;
+    width: 375px;
+    margin-top: 10px;
+
+}
+
+.nameInput {
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 15px;
+    background-color: #262938;
+    display: inline-block;
+    border: none;
+    width: 180px;
+    margin-top: 10px;
+    height: 6px;
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.customFileUpload {
+
+    cursor: pointer;
+}
+
+.uploadDiv {
+    text-align: center;
+    color: white;
+}
