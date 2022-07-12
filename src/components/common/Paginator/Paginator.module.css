@@ -1,10 +1,20 @@
 .paginator {
-    margin: 10px;
+    display: flex;
+    margin: 15px 15px 0px 15px;
+    background-color: #262938;
+    border-radius: 15px;
 }
 
 .pageNumber {
-    padding: 2px;
-    border: 1px solid grey;
+    padding: 0px 20px;
+    margin: 0 auto;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid white
 }
 
 .pageNumber.selectedPage {

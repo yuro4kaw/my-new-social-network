@@ -94,7 +94,7 @@ const ProfileData = (props) => {
 
                 <div className={s.secondPart}>
                     <div>
-                        <b className={s.topicHeader}>Status: </b><br /><ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
+                        <b className={s.topicHeader}>Status: </b>   <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
                     </div>
                     <br />
                     <div >

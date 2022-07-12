@@ -53,8 +53,8 @@
 }
 
 .fullName {
-    color: white;
     width: 200px;
+    color: white;
     font-size: 23px;
     font-weight: 600;
     text-align: center;
@@ -62,10 +62,12 @@
 
 
 .topicHeader {
+    display: block;
+    padding: 0px 0px 3px 15px;
     color: white;
     font-size: 14px;
     font-weight: 400;
-    padding: 15px;
+
 
 }
 
@@ -81,11 +83,12 @@
     overflow-y: none;
     outline: none;
     width: 585px;
-    height: 100px;
+    height: 90px;
 }
 
 .lookingForAJob {
-    margin-left: -8px;
+    width: 200px;
+    margin-left: 3.5px;
     color: white;
     font-size: 19px;
     font-weight: 400;

@@ -12,12 +12,10 @@
 
 .basicInfo {
   display: grid;
-  grid-template-columns: 200px auto;
+  grid-template-columns: 215px auto;
 }
 
-.secondPart {
-  padding-left: 10px;
-}
+
 
 .title {
   background-color: #262938;
@@ -43,6 +41,7 @@
 }
 
 .fullName {
+  width: 200px;
   margin-top: 28px;
   color: white;
   font-size: 23px;
@@ -52,10 +51,12 @@
 
 
 .topicHeader {
+  display: block;
+  padding: 0px 0px 3px 15px;
   color: white;
   font-size: 14px;
   font-weight: 400;
-  padding: 15px;
+
 
 }
 
@@ -67,10 +68,13 @@
   font-size: 16px;
   display: inline-block;
   font-weight: 400;
+  width: 585px;
+  height: 90px;
 
 }
 
 .lookingForAJob {
+  width: 200px;
   color: white;
   font-size: 19px;
   font-weight: 400;
