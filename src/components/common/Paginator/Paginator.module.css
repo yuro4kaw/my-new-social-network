@@ -3,21 +3,44 @@
     margin: 15px 15px 0px 15px;
     background-color: #262938;
     border-radius: 15px;
+
+}
+
+.all {
+    text-align: center;
+    width: 100%;
+
 }
 
 .pageNumber {
-    padding: 0px 20px;
+    display: block;
+    border: 1px solid white;
+    padding: 5px;
     margin: 0 auto;
     outline: 0;
-    border: none;
+
     cursor: pointer;
     color: white;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
-    border: 1px solid white
+
 }
 
 .pageNumber.selectedPage {
     font-weight: bold;
-    border-color: black;
+    background-color: #3b3d4d;
+}
+
+
+
+.prev {
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.next {
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }

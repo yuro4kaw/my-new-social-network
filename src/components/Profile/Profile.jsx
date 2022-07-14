@@ -12,7 +12,9 @@ function Profile(props) {
         updateStatus={props.updateStatus}
         saveProfile={props.saveProfile} />
       <hr />
-      <MyPostsContainer />
+      <MyPostsContainer
+        isOwner={props.isOwner}
+        profile={props.profile} />
     </div>
   )
 }

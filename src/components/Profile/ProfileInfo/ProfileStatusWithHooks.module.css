@@ -7,4 +7,7 @@
     display: inline-block;
     font-weight: 400;
     border: none;
+    font-family: monospace;
+    width: 100%;
+    box-sizing: border-box;
 }

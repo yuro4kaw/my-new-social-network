@@ -4,8 +4,6 @@ import s from "./ProfileInfo.module.css"
 import userPhoto from "../../../assets/img/profileImg.png";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks"
 import ProfileDataForm from "./ProfileDataForm";
-import no from "../../../assets/img/no.png"
-import yes from "../../../assets/img/yes.png"
 import facebook from "../../../assets/img/facebook.png"
 import instagram from "../../../assets/img/instagram.png"
 import github from "../../../assets/img/github.png"
@@ -85,11 +83,11 @@ const ProfileData = (props) => {
                     </div>
                     <br />
                     <div className={s.lookingForAJob}>
-                        <b>Looking for a job:</b> {props.profile.lookingForAJob ? <img className={s.checkbox} src={yes} alt="yes" /> : <img className={s.checkbox} src={no} alt="no" />}
+                        <b>Looking for a job:</b> {props.profile.lookingForAJob ? <b>✅</b> : <b>❌</b>}
                     </div>
-                    <br />
+
                     {props.isOwner &&
-                        <div><button className={s.editProfileButton} onClick={props.goToEditMode}>Edit profile</button></div>}
+                        <button className={s.editProfileButton} onClick={props.goToEditMode}>Edit profile ✏️</button>}
                 </div>
 
                 <div className={s.secondPart}>

@@ -36,10 +36,12 @@ import MyPosts from "./MyPosts";
 //   )
 // }
 
-let mapStateToProps = (state) => {
+let mapStateToProps = (state, props) => {
   return {
     postsArray: state.profilePage.posts,
-    newPostText: state.profilePage.newPostText
+    newPostText: state.profilePage.newPostText,
+    isOwner: props.isOwner,
+    profile: props.profile,
   }
 }
 

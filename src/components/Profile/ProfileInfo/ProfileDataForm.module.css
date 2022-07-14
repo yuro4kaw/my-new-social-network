@@ -1,10 +1,12 @@
 .error {
-    border: red 1px solid;
-    padding: 5px;
+    border: red 1px inset;
+    padding: 5px 10px;
+    margin-top: 10px;
     color: red;
-    width: 300px;
-    border-radius: 5px;
-
+    width: 200px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .avatar {
@@ -14,19 +16,14 @@
     /* box-shadow: 0px 0px 15px rgba(255, 173, 66, 0.438); */
 }
 
-.profile {
-    padding: 10px;
-}
-
 .profile .avatar {
     min-width: 70px;
 }
 
-
-
 .basicInfo {
     display: grid;
     grid-template-columns: 215px auto;
+    margin: 15px;
 }
 
 .title {
@@ -38,18 +35,10 @@
     justify-content: space-around
 }
 
-.socialNetworkIcon {
-    width: 40px;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 0;
-}
-
 /* text styling */
 
 .checkbox {
     width: 13px;
-
 }
 
 .fullName {
@@ -67,11 +56,10 @@
     color: white;
     font-size: 14px;
     font-weight: 400;
-
-
 }
 
 .topicText {
+    width: 100%;
     color: white;
     padding: 12px 20px;
     border-radius: 15px;
@@ -82,13 +70,13 @@
     resize: none;
     overflow-y: none;
     outline: none;
-    width: 585px;
-    height: 90px;
+    box-sizing: border-box;
+    height: 116px;
 }
 
 .lookingForAJob {
     width: 200px;
-    margin-left: 3.5px;
+    margin: 4px 0px 0px -3px;
     color: white;
     font-size: 19px;
     font-weight: 400;
@@ -107,24 +95,19 @@
     border: solid 1px #767676;
     font-size: 15px;
     font-weight: 700;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.editProfileButton:hover {
+    background-color: #3b3d4d;
+}
+
+.editProfileButton:active {
+    background-color: #454755;
 }
 
 .title {
     margin-top: 15px;
-}
-
-.linkInput {
-    color: white;
-    padding: 12px 20px;
-    border-radius: 15px;
-    background-color: #262938;
-    font-size: 16px;
-    display: inline-block;
-    font-weight: 400;
-    border: none;
-    width: 375px;
-    margin-top: 10px;
-
 }
 
 .nameInput {
@@ -140,12 +123,28 @@
     width: 180px;
     margin-top: 10px;
     height: 6px;
+    outline: none;
+}
+
+.linkInput {
+    color: white;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background-color: #262938;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 400;
+    margin-top: 10px;
+    width: calc(100% - 15px);
+    box-sizing: border-box;
+    outline: none;
+    border: solid 1px #767676;
 }
 
 .contacts {
     display: grid;
     grid-template-columns: auto auto;
-    justify-content: space-between
+    margin: -10px 0px 15px 15px;
 }
 
 input[type="file"] {
@@ -160,4 +159,8 @@ input[type="file"] {
 .uploadDiv {
     text-align: center;
     color: white;
+}
+
+.mainTextarea {
+    height: 135px;
 }

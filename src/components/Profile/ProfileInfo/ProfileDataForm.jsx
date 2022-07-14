@@ -24,27 +24,26 @@ const ProfileDataForm = (props) => {
                         <b>Looking for a job:</b> {CreateField("input", null, "lookingForAJob", null, "checkbox")}
                     </div>
                     <br />
-                    <button className={s.editProfileButton}>Save</button>
-
+                    <button className={s.editProfileButton}>Save 💾</button>
+                    {props.error && <div className={s.error}>
+                        {props.error}
+                    </div>}
 
                 </div>
 
                 <div className={s.secondPart}>
-                    <div>
+                    <div >
                         <b className={s.topicHeader}>Status: </b><ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
                     </div>
                     <br />
-                    <div >
-                        <b className={s.topicHeader}>About Me:</b> <div >{CreateField("textarea", "Write something interesting about yourself", "aboutMe", { className: s.topicText })}</div>
+                    <div className={s.mainTextarea}>
+                        <b className={s.topicHeader}>About Me:</b> {CreateField("textarea", "Write something interesting about yourself", "aboutMe", { className: s.topicText })}
                     </div>
                     <br />
-
-                    <div>
-                        <b className={s.topicHeader}>My professional skills:</b> <div>{CreateField("textarea", "Write your professional skills", "lookingForAJobDescription", { className: s.topicText })}</div>
+                    <div className={s.mainTextarea}>
+                        <b className={s.topicHeader}>My professional skills:</b>{CreateField("textarea", "Write your professional skills", "lookingForAJobDescription", { className: s.topicText })}
                     </div>
-                    {props.error && <div className={s.error}>
-                        {props.error}
-                    </div>}
+
 
 
                 </div>

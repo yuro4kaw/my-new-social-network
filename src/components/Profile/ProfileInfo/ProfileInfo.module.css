@@ -5,22 +5,21 @@
   /* box-shadow: 0px 0px 15px rgba(255, 173, 66, 0.438); */
 }
 
-.profile {
-  padding: 15px;
-}
+.profile {}
 
 
 .basicInfo {
   display: grid;
   grid-template-columns: 215px auto;
+  margin: 15px;
 }
 
 
 
 .title {
   background-color: #262938;
-
-  border-radius: 10px;
+  margin: 15px;
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-around
@@ -61,6 +60,7 @@
 }
 
 .topicText {
+  width: 100%;
   color: white;
   padding: 12px 20px;
   border-radius: 15px;
@@ -68,9 +68,14 @@
   font-size: 16px;
   display: inline-block;
   font-weight: 400;
-  width: 585px;
-  height: 90px;
+  resize: none;
+  overflow-y: none;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  height: 116px;
 
+  font-family: monospace;
 }
 
 .lookingForAJob {
@@ -82,6 +87,7 @@
 }
 
 .editProfileButton {
+  margin-top: 18px;
   outline: 0;
   border: none;
   cursor: pointer;
@@ -93,8 +99,13 @@
   border: solid 1px #767676;
   font-size: 15px;
   font-weight: 700;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.title {
-  margin-top: 15px;
+.editProfileButton:hover {
+  background-color: #3b3d4d;
+}
+
+.editProfileButton:active {
+  background-color: #454755;
 }

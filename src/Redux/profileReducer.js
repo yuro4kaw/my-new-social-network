@@ -114,7 +114,7 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
     } else {
         let message = response.data.messages.length > 0 ? response.data.messages[0] : "Some error"
         dispatch(stopSubmit("edit-profile", { _error: message }));
-        debugger
+        
         return Promise.reject(message);
     }
         

@@ -5,7 +5,7 @@ import { reduxForm } from "redux-form";
 import { Field } from "redux-form";
 
 function MyPosts(props) {
-  let postElements = props.postsArray.map(p => <Post key={p.id} likesCount={p.likesCount} postText={p.message} />)
+  let postElements = props.postsArray.map(p => <Post key={p.id} likesCount={p.likesCount} postText={p.message} profile={props.profile} />)
 
   let onAddPost = (values) => {
     props.addPost(values.postText);
@@ -13,11 +13,25 @@ function MyPosts(props) {
 
   return (
     <div>
-      <div className={s.myPosts}>My posts</div>
-      <div className={s.postCreate}>
-        <AddPostFormRedux onSubmit={onAddPost} />
-      </div>
-      {postElements}
+
+      {props.isOwner
+        ? <>
+          <div className={s.myPosts}>My posts</div>
+          <div className={s.postCreate}>
+            <AddPostFormRedux onSubmit={onAddPost} />
+          </div>
+          <div>{postElements}</div>
+        </>
+
+        : <>
+          <div className={s.myPosts}>Posts</div>
+          <div>{postElements}</div>
+        </>
+
+
+      }
+
+
     </div>
   )
 }

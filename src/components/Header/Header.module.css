@@ -32,4 +32,13 @@
   border: solid 1px #767676;
   font-size: 15px;
   font-weight: 700;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.logoutButton:hover {
+  background-color: #3b3d4d;
+}
+
+.logoutButton:active {
+  background-color: #454755;
 }
