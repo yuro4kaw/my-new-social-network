@@ -8,6 +8,7 @@ import { CreateField } from "../common/FormsControls/FormsControls";
 
 const LoginForm = (props) => {
 
+
     return (
         <form onSubmit={props.handleSubmit} className={s.loginForm}>
 
@@ -24,9 +25,13 @@ const LoginForm = (props) => {
             {props.error && <div className={s.formError}>
                 {props.error}
             </div>}
+
             <div>
-                <button className={s.submit}>Login</button>
+
+                <button disabled={props.isFetching} className={s.submit}>Login</button>
+
             </div>
+
         </form >)
 }
 
@@ -44,14 +49,15 @@ const Login = (props) => {
     return (
         <div className={s.loginText}>
             <h1>Login</h1>
-            <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl} />
+            <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl} isFetching={props.isFetching} />
         </div>
     )
 }
 
 const mapStateToProps = (state) => ({
     captchaUrl: state.auth.captchaUrl,
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
+    isFetching: state.auth.isFetching,
 })
 
 export default connect(mapStateToProps, { login })(Login);

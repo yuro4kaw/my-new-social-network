@@ -5,12 +5,14 @@ import Navbar from "./components/Navbar/Navbar";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import Login from "./components/Login/Login";
+
 import { connect, Provider } from "react-redux";
 import { initializeApp } from "./Redux/appReducer";
 import Preloader from "./components/common/Preloader/Preloader";
 import { compose } from "redux";
 import store from "./Redux/reduxStore";
+
+import Login from "./components/Login/Login";
 
 const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
 const News = React.lazy(() => import("./components/News/News"));

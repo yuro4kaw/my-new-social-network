@@ -81,6 +81,7 @@
     border: solid 1px #767676;
     font-size: 15px;
     font-weight: 700;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .submit:hover {
@@ -89,6 +90,11 @@
 
 .submit:active {
     background-color: #454755;
+}
+
+.submit:disabled {
+    background-color: #ff0000;
+    color: rgb(207, 207, 207);
 }
 
 .errorOpacity {
