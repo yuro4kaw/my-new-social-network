@@ -10,7 +10,8 @@
   background-color: #2e3041;
   border-radius: 20px;
   min-width: 214px;
-  
+  min-height: 647.55px;
+
 }
 
 .nav ul {
@@ -58,6 +59,7 @@
 .nav ul li:first-child {
   border-radius: 15px 15px 0px 0px;
 }
+
 .nav ul li:first-child a.active {
   border-radius: 15px 15px 0px 0px;
 }
@@ -65,6 +67,7 @@
 .nav ul li:last-child {
   border-radius: 0px 0px 15px 15px;
 }
+
 .nav ul li:last-child a.active {
   border-radius: 0px 0px 15px 15px;
 }

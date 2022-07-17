@@ -5,6 +5,15 @@ import s from "./ProfileDataForm.module.css";
 import userPhoto from "../../../assets/img/profileImg.png";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
+import facebook from "../../../assets/img/facebook.png"
+import instagram from "../../../assets/img/instagram.png"
+import github from "../../../assets/img/github.png"
+import myApp from "../../../assets/img/myApp.png"
+import socialNetworkIcon from "../../../assets/img/socialNetworkIcon.png"
+import twitter from "../../../assets/img/twitter.png"
+import youtube from "../../../assets/img/youtube.png"
+import vkontakte from "../../../assets/img/vkontakte.png"
+
 const ProfileDataForm = (props) => {
 
     return (
@@ -24,7 +33,7 @@ const ProfileDataForm = (props) => {
                         <b>Looking for a job:</b> {CreateField("input", null, "lookingForAJob", null, "checkbox")}
                     </div>
                     <br />
-                    <button className={s.editProfileButton}>Save 💾</button>
+                    <button disabled={props.isFetching} className={s.editProfileButton}>Save 💾</button>
                     {props.error && <div className={s.error}>
                         {props.error}
                     </div>}
@@ -51,14 +60,44 @@ const ProfileDataForm = (props) => {
 
             <div className={s.contacts}>
                 {Object.keys(props.profile.contacts).map(key => {
-                    return <div key={key}>
-                        <b>{CreateField("input", key, "contacts." + key, { className: s.linkInput })}</b>
+                    return <div className={s.fullLink}>
+                        <Contact key={key} contactTitle={key} contactValue={props.profile.contacts[key]} />{CreateField("input", key, "contacts." + key, { className: s.linkInput })}
                     </div>
                 })}
             </div>
         </form >
     )
 
+}
+
+const Contact = ({ contactTitle, contactValue }) => {
+
+    const renderSwitch = () => {
+        switch (contactTitle) {
+            case 'facebook':
+                return <img className={s.socialNetworkIcon} src={facebook} alt="social-network-img" />;
+            case 'website':
+                return <img className={s.socialNetworkIcon} src={myApp} alt="social-network-img" />;
+            case 'vk':
+                return <img className={s.socialNetworkIcon} src={vkontakte} alt="social-network-img" />;
+            case 'twitter':
+                return <img className={s.socialNetworkIcon} src={twitter} alt="social-network-img" />;
+            case 'instagram':
+                return <img className={s.socialNetworkIcon} src={instagram} alt="social-network-img" />;
+            case 'youtube':
+                return <img className={s.socialNetworkIcon} src={youtube} alt="social-network-img" />;
+            case 'github':
+                return <img className={s.socialNetworkIcon} src={github} alt="social-network-img" />;
+            case 'mainLink':
+                return <img className={s.socialNetworkIcon} src={socialNetworkIcon} alt="social-network-img" />;
+            default:
+                return null;
+        }
+    }
+
+    return (
+        <a href={contactValue} rel="noreferrer" target="_blank">{renderSwitch({ contactTitle })}<br /></a>
+    )
 }
 
 const ProfileDataFormReduxForm = reduxForm({ form: "edit-profile" })(ProfileDataForm)

@@ -11,25 +11,22 @@ const LoginForm = (props) => {
 
     return (
         <form onSubmit={props.handleSubmit} className={s.loginForm}>
-
-            {CreateField("input", "Email", "email", { id: s.dataInput })}
-
-            {CreateField("input", "Password", "password", { id: s.dataInput })}
-
-            {CreateField("input", null, "rememberMe", { id: s.checkbox }, "checkbox", "Remember me")}
-
-            {props.captchaUrl && <img src={props.captchaUrl} alt="captcha" />}
-
-            {props.captchaUrl && CreateField("input", "Captcha", "captcha")}
-
             {props.error && <div className={s.formError}>
                 {props.error}
             </div>}
+            {CreateField("input", "Email", "email", { id: s.dataInput })}
+
+            {CreateField("input", "Password", "password", { id: s.dataInput })}
+            <div className={s.checkboxDiv}>
+                {CreateField("input", null, "rememberMe", { id: s.checkbox }, "checkbox", "Remember me")}
+            </div>
+
+            {props.captchaUrl && <img src={props.captchaUrl} alt="captcha" />}
+
+            {props.captchaUrl && CreateField("input", "Captcha", "captcha", { id: s.captchaInput })}
 
             <div>
-
                 <button disabled={props.isFetching} className={s.submit}>Login</button>
-
             </div>
 
         </form >)

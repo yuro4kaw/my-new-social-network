@@ -7,6 +7,8 @@ const SET_USER_PROFILE = "SET_USER_PROFILE"
 const SET_STATUS = "SET_STATUS"
 const DELETE_POST = "DELETE_POST"
 const SAVE_PHOTO_SUCCESS = "SAVE_PHOTO_SUCCESS"
+const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
+
 
 let initialState = {
     posts: [
@@ -60,8 +62,14 @@ const profileReducer = (state = initialState, action) => {
             }
         }
         case SAVE_PHOTO_SUCCESS:
-            
-            return {...state, profile: {...state.profile, photos: action.photos }}
+            return {
+                ...state, profile: { ...state.profile, photos: action.photos }
+            }
+        case TOGGLE_IS_FETCHING: 
+            return {
+                ...state,
+                isFetching: action.isFetching,
+            }
         default:
             return state;
     }
@@ -69,6 +77,7 @@ const profileReducer = (state = initialState, action) => {
 
 export const addPostActionCreator = (postText) => ({ type: ADD_POST, postText });
 export const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile });
+export const toggleIsFetching = (isFetching) => ({ type: TOGGLE_IS_FETCHING, isFetching });
 export const setStatus = (status) => ({type: SET_STATUS, status})
 export const updateNewPostTextActionCreator = (text) => ({
   type: UPDATE_NEW_POST_TEXT,
@@ -104,18 +113,22 @@ export const savePhoto = (photoFile) => async (dispatch) => {
 }
 
 export const saveProfile = (profile) => async (dispatch, getState) => {
+    
+    dispatch(toggleIsFetching(true));
     const userId = getState().auth.userId;
     let response = await profileAPI.saveProfile(profile);
     
     
     if (response.data.resultCode === 0) {
-        dispatch(setProfileThunk(userId));  
+        dispatch(setProfileThunk(userId)); 
+        dispatch(toggleIsFetching(false));
         
     } else {
         let message = response.data.messages.length > 0 ? response.data.messages[0] : "Some error"
         dispatch(stopSubmit("edit-profile", { _error: message }));
-        
+        dispatch(toggleIsFetching(false));
         return Promise.reject(message);
+        
     }
         
     

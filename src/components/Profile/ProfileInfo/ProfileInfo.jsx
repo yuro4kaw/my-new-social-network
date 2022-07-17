@@ -55,7 +55,9 @@ function ProfileInfo(props) {
                     profile={props.profile}
                     onSubmit={onSubmit}
                     status={props.status}
-                    updateStatus={props.updateStatus} />
+                    updateStatus={props.updateStatus}
+                    isFetching={props.isFetching}
+                />
 
                 : < ProfileData
 
@@ -143,7 +145,7 @@ const Contact = ({ contactTitle, contactValue }) => {
             case 'mainLink':
                 return <img className={s.socialNetworkIcon} src={socialNetworkIcon} alt="social-network-img" />;
             default:
-                return 'foo';
+                return null;
         }
     }
 

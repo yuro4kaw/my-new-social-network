@@ -4,8 +4,6 @@
     color: white;
 }
 
-
-
 .loginForm {
     color: white;
     margin: 5px 15px 15px 15px;
@@ -16,8 +14,24 @@
     border-radius: 15px;
 }
 
+.loginForm img {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: calc(100% - 30px);
+    border-radius: 15px;
+
+}
+
+.checkboxDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .loginForm label {
-    color: red;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+
 }
 
 
@@ -27,16 +41,26 @@
     margin: 15px 15px 0px 15px;
     border-radius: 15px;
     background-color: #2e3041;
-
     font-size: 16px;
     display: inline-block;
     font-weight: 400;
     outline: none;
+}
 
-
+#captchaInput {
+    padding: 12px 20px;
+    color: white;
+    margin: 15px 15px 15px 15px;
+    border-radius: 15px;
+    background-color: #2e3041;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 400;
+    outline: none;
 }
 
 #checkbox {
+
     margin: 15px;
     display: inline-block;
     width: 40px;
@@ -59,15 +83,12 @@
 
 
 .loginForm button {
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    margin: 15px;
+    width: 120px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 0px 0px 15px 15px;
 }
 
-.error {
-    color: red;
-}
 
 .submit {
     cursor: pointer;
@@ -102,11 +123,12 @@
 }
 
 .formError {
+    text-align: center;
     border: red 1px solid;
-    padding: 5px;
+    padding: 10px;
     color: red;
-    width: 300px;
-    border-radius: 5px;
+    margin: 15px 15px 0px 15px;
+    border-radius: 15px;
 
 }
 

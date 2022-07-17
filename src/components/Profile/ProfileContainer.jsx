@@ -8,6 +8,7 @@ import {
     useParams,
 } from "react-router-dom";
 import { compose } from "redux";
+import { Navigate } from "react-router-dom";
 
 
 
@@ -34,7 +35,7 @@ class ProfileContainer extends React.Component {
         if (!userId) {
             userId = this.props.authorisedUserId;
             if (!userId) {
-                //this.props.router.navigate("/login");
+                <Navigate to="/login" />
             }
         }
         this.props.setProfileThunk(userId);
@@ -47,7 +48,7 @@ class ProfileContainer extends React.Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
 
-        if (this.props.router.params.userId != prevProps.router.params.userId)
+        if (this.props.router.params.userId !== prevProps.router.params.userId)
             this.refreshProfile();
     }
 
@@ -74,7 +75,7 @@ class ProfileContainer extends React.Component {
                 status={this.props.status}
                 updateStatus={this.props.updateStatus}
                 savePhoto={this.props.savePhoto}
-
+                isFetching={this.props.isFetching}
             />
         )
     }
@@ -85,6 +86,7 @@ let mapStateToProps = (state) => ({
     status: state.profilePage.status,
     authorisedUserId: state.auth.userId,
     isAuth: state.auth.isAuth,
+    isFetching: state.auth.isFetching,
 
 });
 

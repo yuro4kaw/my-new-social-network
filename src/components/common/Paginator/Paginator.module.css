@@ -39,8 +39,16 @@
     border-bottom-left-radius: 15px;
 }
 
+.prev:disabled {
+    border: 1px solid white;
+}
+
 .next {
     border: none;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+.next:disabled {
+    border: 1px solid white;
 }
