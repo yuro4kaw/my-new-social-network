@@ -1,12 +1,12 @@
 import React from "react";
-// import s from "./Settings.module.css"
+import s from "./Settings.module.css"
 
 
 function Settings(props) {
     return (
-        <div>
+        <div className={s.settings}>
            Settings
-      </div>
+        </div>
     )
 }
 

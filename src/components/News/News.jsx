@@ -1,12 +1,12 @@
 import React from "react";
-// import s from "./News.module.css"
+import s from "./News.module.css"
 
 
 function News(props) {
     return (
-        <div>
-           News
-      </div>
+        <div className={s.news}>
+           News 
+        </div>
     )
 }
 

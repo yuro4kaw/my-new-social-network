@@ -19,7 +19,6 @@ let Paginator = ({ totalUsersCount, pageSize, currentPage, onPageChanged, portio
             portionNumber > 1
                 ? <button className={s.prev} onClick={() => { setPortionNumber(portionNumber - 1) }}>PREV</button>
                 : <button disabled="disabled" className={s.prev} onClick={() => { setPortionNumber(portionNumber - 1) }}>PREV</button>
-
         }
 
         {pages

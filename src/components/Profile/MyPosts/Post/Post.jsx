@@ -5,7 +5,7 @@ import Preloader from "../../../common/Preloader/Preloader";
 
 function Post(props) {
   if (!props.profile) {
-    return <Preloader />
+    return (<></>)
   }
   return (
     <div className={s.item}>

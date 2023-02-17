@@ -43,19 +43,17 @@ class UsersContainer extends React.Component {
 
     render() {
         return <>
-
+            < Paginator currentPage={this.props.currentPage} onPageChanged={this.onPageChanged} totalUsersCount={this.props.totalUsersCount} pageSize={this.props.pageSize} />
             {this.props.isFetching
                 ? <Preloader />
-                : <>
-                    < Paginator currentPage={this.props.currentPage} onPageChanged={this.onPageChanged} totalUsersCount={this.props.totalUsersCount} pageSize={this.props.pageSize} />
-                    < Users
+                : < Users
                         users={this.props.users}
                         follow={this.props.follow}
                         unfollow={this.props.unfollow}
                         followingInProgress={this.props.followingInProgress}
 
                     />
-                </>}
+            }
         </>
     }
 }
@@ -73,7 +71,6 @@ class UsersContainer extends React.Component {
 // }
 
 let mapStateToProps = (state) => {
-
     return {
         users: getAllUsersSuperSelector(state),
         // users: getAllUsers(state),

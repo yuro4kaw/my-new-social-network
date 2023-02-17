@@ -9,12 +9,15 @@
 .all {
     text-align: center;
     width: 100%;
+}
 
+.all:hover{
+    background-color: #3b3d4d;
 }
 
 .pageNumber {
     display: block;
-    border: 1px solid white;
+    border: solid 1px #767676;
     padding: 5px;
     margin: 0 auto;
     outline: 0;
@@ -28,27 +31,39 @@
 
 .pageNumber.selectedPage {
     font-weight: bold;
-    background-color: #3b3d4d;
+    background-color: #454755;
 }
 
 
 
 .prev {
+    color: white;
     border: none;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    cursor: pointer;
+    background-color: #262938;
+    border: solid 1px #767676;
 }
 
-.prev:disabled {
-    border: 1px solid white;
+.prev:disabled{
+    color: #767676;
+    background-color: #3b3d4d;
 }
+
 
 .next {
+    color: white;
     border: none;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    cursor: pointer;
+    background-color: #262938;
+    border: solid 1px #767676;
 }
 
-.next:disabled {
-    border: 1px solid white;
+
+.next:disabled{
+    color: #767676;
+    background-color: #3b3d4d;
 }

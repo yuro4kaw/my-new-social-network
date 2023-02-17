@@ -2,6 +2,8 @@
     font-style: italic;
     margin: 15px 0px 0px 25px;
     color: white;
+    text-align: center;
+    padding: 120px 0 10px 0;
 }
 
 .loginForm {
@@ -10,8 +12,10 @@
     background-color: #262938;
     display: grid;
     grid-template-columns: auto;
+    margin: 0 auto;
     width: 50%;
     border-radius: 15px;
+    text-align: center;
 }
 
 .loginForm img {

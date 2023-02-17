@@ -1,12 +1,12 @@
 import React from "react";
-// import s from "./Music.module.css"
+import s from "./Music.module.css"
 
 
 function Music(props) {
     return (
-        <div>
+        <div className={s.music}>
            Music
-      </div>
+        </div>
     )
 }
 

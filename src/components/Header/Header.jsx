@@ -15,11 +15,10 @@ function Header(props) {
         {props.isAuth
           ? <div> {props.login} - <button className={s.logoutButton} onClick={props.logout}>Logout</button> </div>
           : <NavLink to="/login"><button className={s.logoutButton} >Login</button></NavLink>}
-
-
       </div>
     </header>
   )
 }
 
 export default Header;
+
